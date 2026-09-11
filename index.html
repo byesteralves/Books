@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BookSearch - Biblioteca Digital</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <div class="logo">
+            📚 BookSearch
+        </div>
+
+        <p>
+            Encontre livros, autores e informações bibliográficas
+        </p>
+    </header>
+
+
+    <main class="container">
+
+        <section class="busca">
+
+            <h1>Encontre seu próximo livro</h1>
+
+            <p class="subtitulo">
+                Pesquise milhares de livros através da Google Books API.
+            </p>
+
+            <div class="barra-pesquisa">
+
+                <input
+                    type="text"
+                    id="campoBusca"
+                    placeholder="Digite o nome do livro ou autor..."
+                    autocomplete="off"
+                >
+
+                <button id="botaoBuscar">
+                    🔍 Pesquisar
+                </button>
+
+            </div>
+
+            <p id="mensagem"></p>
+
+        </section>
+
+
+        <section>
+
+            <div id="resultados" class="grade-livros"></div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>
+            BookSearch • Projeto de consumo de API
+        </p>
+
+        <p>
+            Dados fornecidos pela Google Books API
+        </p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
