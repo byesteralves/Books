@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f8;
+    color: #1f2937;
+    min-height: 100vh;
+}
+
+.cabecalho {
+    background: linear-gradient(135deg, #1e3a8a, #2563eb);
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.cabecalho p {
+    font-size: 17px;
+    opacity: 0.9;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.busca {
+    background: white;
+    margin-top: -25px;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    position: relative;
+}
+
+.busca h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #111827;
+}
+
+.subtitulo {
+    color: #6b7280;
+    margin-bottom: 25px;
+}
+
+.barra-pesquisa {
+    display: flex;
+    gap: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.barra-pesquisa input {
+    flex: 1;
+    padding: 16px 18px;
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.barra-pesquisa input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.barra-pesquisa button {
+    border: none;
+    background: #2563eb;
+    color: white;
+    padding: 0 25px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.barra-pesquisa button:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.barra-pesquisa button:disabled {
+    background: #93c5fd;
+    cursor: wait;
+    transform: none;
+}
+
+#mensagem {
+    margin-top: 20px;
+    color: #4b5563;
+    font-weight: bold;
+}
+
+.grade-livros {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 25px;
+    padding: 40px 0;
+}
+
+.card-livro {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-livro:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.14);
+}
+
+.capa-container {
+    height: 300px;
+    background: #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.capa-livro {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.capa-sem-imagem {
+    font-size: 60px;
+}
+
+.info-livro {
+    padding: 20px;
+    flex: 1;
+}
+
+.info-livro h2 {
+    font-size: 20px;
+    color: #111827;
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.autor {
+    color: #2563eb;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.detalhe {
+    color: #6b7280;
+    font-size: 14px;
+    margin: 6px 0;
+}
+
+.descricao {
+    color: #4b5563;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: 12px;
+}
+
+.botao-detalhes {
+    display: block;
+    margin-top: 18px;
+    padding: 11px;
+    text-align: center;
+    background: #eff6ff;
+    color: #2563eb;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao-detalhes:hover {
+    background: #2563eb;
+    color: white;
+}
+
+.sem-resultados {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px 20px;
+    color: #6b7280;
+}
+
+.sem-resultados .icone {
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.sem-resultados h2 {
+    margin-bottom: 10px;
+    color: #374151;
+}
+
+footer {
+    margin-top: 30px;
+    padding: 30px;
+    background: #111827;
+    color: #9ca3af;
+    text-align: center;
+    line-height: 1.8;
+}
+
+@media (max-width: 700px) {
+
+    .logo {
+        font-size: 27px;
+    }
+
+    .busca {
+        padding: 25px 18px;
+    }
+
+    .busca h1 {
+        font-size: 24px;
+    }
+
+    .barra-pesquisa {
+        flex-direction: column;
+    }
+
+    .barra-pesquisa button {
+        padding: 14px;
+    }
+
+    .grade-livros {
+        grid-template-columns: 1fr;
+    }
+
+}
